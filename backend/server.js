@@ -9,7 +9,7 @@ const { z } = require("zod");
 const app = express();
 const db = new Database("db.sqlite");
 
-const SECRET = "jwt_secret_key_change_me";
+const SECRET = "4def225f974d255b34dd4a20ad92b3e0b2fae5377c87d72d60c66b449d7986f1ace6c051dc917c656102da3a8efaa1866cfaea316e4f42188bacc7347d6045f2";
 
 db.exec(`
 CREATE TABLE IF NOT EXISTS users (
