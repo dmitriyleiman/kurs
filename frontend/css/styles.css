@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #0f0f10;
+  color: #eaeaea;
+}
+
+input, button {
+  font-family: Inter, sans-serif;
+  margin: 4px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+  background: #151517;
+  color: #eaeaea;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #222;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid #2a2a2a;
+  background: #111113;
+  margin-bottom: 15px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.container {
+  padding: 0 18px;
+}
+
+#list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.task-row {
+  width: 33%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #151517;
+  border: 1px solid #2a2a2a;
+  transition: 0.2s ease;
+}
+
+.task-row:hover {
+  background: #1b1b1e;
+  transform: translateY(-2px);
+}
+
+.task-text {
+  flex: 1;
+  word-break: break-word;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 22px;
+  height: 24px;
+  border: 2px solid #3a3a3a;
+  border-radius: 6px;
+  background: #151517;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:hover {
+  border-color: #4a4a4a;
+}
+
+input[type="checkbox"]:checked {
+  background: #22c55e;
+  border-color: #22c55e;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%230f0f10' stroke-width='3' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 900px) {
+  .task-row {
+    width: 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .task-row {
+    width: 100%;
+  }
+}
+
+.delete-btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+  background: #151517;
+  color: #aaa;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #1f1f22;
+  color: #ff4d4d;
+  border-color: #3a3a3a;
+}
+
+.delete-btn svg {
+  pointer-events: none;
+}
