@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 const Database = require("better-sqlite3");
 const rateLimit = require("express-rate-limit");
 const { z } = require("zod");
+const path = require("path");
 
 const app = express();
 const db = new Database("db.sqlite");
@@ -27,7 +28,7 @@ CREATE TABLE IF NOT EXISTS tasks (
 `);
 
 app.use(express.json());
-app.use(express.static("../frontend"));
+app.use(express.static(path.join(__dirname, "../frontend-public")));
 app.use(cors({ origin: "*" }));
 
 const authLimiter = rateLimit({
