@@ -29,6 +29,9 @@ CREATE TABLE IF NOT EXISTS tasks (
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend-public")));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/index.html"));
+});
 app.use(cors({ origin: "*" }));
 
 const authLimiter = rateLimit({
