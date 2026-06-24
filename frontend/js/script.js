@@ -1,4 +1,4 @@
-const API = "http://localhost:3000";
+const API = "http://83.147.255.183:3000";
 
 const root = document.createElement("div");
 document.body.appendChild(root);
@@ -16,6 +16,8 @@ function clearToken() {
 }
 
 let currentUser = null;
+
+
 
 const api = {
   loading: false,
